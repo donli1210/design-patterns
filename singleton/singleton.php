@@ -4,6 +4,8 @@
  * Singleton class
  *
  */
+
+ // final class cannot be extended
 final class UserFactory
 {
     /**
@@ -16,7 +18,7 @@ final class UserFactory
         // See http://php.net/language.variables.scope#language.variables.scope.static
         // static $inst is initialized only in first call
         static $inst = null;
-        if ($inst === null) {
+        if (null === $inst) {
             $inst = new UserFactory();
         }
         return $inst;
